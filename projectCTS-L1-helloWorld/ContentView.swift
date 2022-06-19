@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Hello World")
+            Button {
+                
+            } label: {
+                Text("Change Text")
+            }
+            // Add a picker
+        }
     }
 }
 
