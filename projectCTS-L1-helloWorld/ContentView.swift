@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var message = ["Hello World", "App Development", "SST ICT Dept"]
+    @State var messageIndex = 0
+    
     var body: some View {
         VStack {
-            Text("Hello World")
+            Text(message[messageIndex % message.count])
             Button {
-                
+                messageIndex += 1
             } label: {
                 Text("Change Text")
             }
