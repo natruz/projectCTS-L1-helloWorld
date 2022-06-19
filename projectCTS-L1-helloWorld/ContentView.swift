@@ -14,6 +14,8 @@ struct ContentView: View {
     @State var foregroundColour = Color.white
     @State var backgroundColour = Color.red
     
+    @State var borderOn = 0
+    
     var body: some View {
         VStack {
             Text(message[messageIndex % message.count])
@@ -36,8 +38,15 @@ struct ContentView: View {
                 }
             } label: {
                 Text("Change Text")
+                    .font(.system(size: 36))
             }
             // Add a picker
+            Picker("", selection: $borderOn) {
+                Text("Border OFF").tag(0)
+                Text("Border ON").tag(1)
+            }
+            .pickerStyle(.segmented)
+            .frame(width: 250)
         }
     }
 }
