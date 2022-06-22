@@ -27,11 +27,11 @@ struct ContentView: View {
                 messageIndex += 1
                 if message[messageIndex % message.count] == "App Development" {
                     foregroundColour = Color.black
-                    backgroundColour = Color.blue
+                    backgroundColour = Color.green
                 } else {
                     foregroundColour = Color.white
                     if message[messageIndex % message.count] == "SST ICT Dept" {
-                        backgroundColour = Color.green
+                        backgroundColour = Color.blue
                     } else {
                         backgroundColour = Color.red
                     }
