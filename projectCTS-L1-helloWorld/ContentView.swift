@@ -18,11 +18,13 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text(message[messageIndex % message.count])
                 .font(.system(size: 36))
                 .frame(width: 374, height: 60)
                 .foregroundColor(foregroundColour)
                 .background(backgroundColour)
+            Spacer()
             Button {
                 messageIndex += 1
                 if message[messageIndex % message.count] == "App Development" {
@@ -51,6 +53,7 @@ struct ContentView: View {
                         .frame(width: 250, height: 60)
                 }
             }
+            Spacer()
             // Add a picker
             Picker("", selection: $borderOn) {
                 Text("Border OFF").tag(0)
@@ -58,6 +61,7 @@ struct ContentView: View {
             }
             .pickerStyle(.segmented)
             .frame(width: 250)
+            Spacer()
         }
     }
 }
