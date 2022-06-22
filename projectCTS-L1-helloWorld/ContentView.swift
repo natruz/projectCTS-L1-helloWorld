@@ -37,8 +37,19 @@ struct ContentView: View {
                     }
                 }
             } label: {
-                Text("Change Text")
-                    .font(.system(size: 36))
+                if borderOn == 1 {
+                    Text("Change Text")
+                        .font(.system(size: 36))
+                        .frame(width: 250, height: 60)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.blue, lineWidth: 2)
+                    )
+                } else {
+                    Text("Change Text")
+                        .font(.system(size: 36))
+                        .frame(width: 250, height: 60)
+                }
             }
             // Add a picker
             Picker("", selection: $borderOn) {
